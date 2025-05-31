@@ -1,8 +1,8 @@
 const prompt = require ('prompt-sync')({sigint:true});
 // usuario ingrese 3 números
-let numUno = prompt ('Ingrese el número a: ');
-let numDos = prompt ('Ingrese el número b: ');
-let numTres = prompt ('Ingrese el número c: ');
+let numUno = Number(prompt ('Ingrese el número a: '));
+let numDos = Number(prompt ('Ingrese el número b: '));
+let numTres = Number(prompt ('Ingrese el número c: '));
 // determinar cuál es el mayor
 let mensaje = '';
 
