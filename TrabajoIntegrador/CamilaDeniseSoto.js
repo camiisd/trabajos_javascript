@@ -752,7 +752,7 @@ function menuPrestamos() {
            
             case 2:
                 idUsuario = parseInt(prompt('Ingrese su id. de soci@: '));
-                let confirmacionBuscarLibro = true;
+                confirmacionBuscarLibro = true;
                 let confirmacionDevolucionUsuario = false;
 
                 devolverLibro(idLibro, idUsuario);
