@@ -43,3 +43,18 @@ function normalizarDatosUsuario(texto, enMayusculas = false) {
     texto = texto.trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "");//.trim() elimina los espacios adelante y detrás. El resto me elimina los caracteres especiales. 
     return enMayusculas ? texto.toUpperCase() : texto.toLowerCase(); //Uso un if ternario para que en el caso que sea verdadero, el texto entre en mayúsculas y en caso de ser falso sea en minúsculas.
     }; //Esta función la voy a inicializar en cada entrada del Usuario
+
+//Punto 2: Funciones de Gestión de Libros
+// a) Implementar una función agregarLibro(id, titulo, autor, anio, genero) que agregue un nuevo libro al array libros.
+const normalizarDatosUsuario(prompt = require('normalizarDatosUsuario(prompt-sync')(); //Inicializo la variable de normalizarDatosUsuario(prompt para que el usuario pueda interactuar con el sistema
+
+function agregarLibro (id, titulo, autor, anio, genero){
+    let nuevoLibro = { //Primero creo un objeto con todas las propiedades para que sea más fácil guardar la información en el array 'libros'
+            id: libros.length + 1, //el id lo asigna directamente el sistema para seguir la numeración del array.
+            titulo: normalizarDatosUsuario(prompt ('Ingrese el título: '), true), //La última función me permite que todo se quede en minúsculas.
+            autor: normalizarDatosUsuario(prompt ('Ingrese el autor: '), false),
+            anio: parseInt(prompt('Ingrese el año: ')), //Me aseguro que el año sea un número entero.
+            genero: normalizarDatosUsuario(prompt('Ingrese el género: '), false)
+        };
+    libros.push (nuevoLibro);
+};
