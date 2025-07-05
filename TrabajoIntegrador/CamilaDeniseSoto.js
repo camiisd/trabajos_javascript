@@ -36,3 +36,10 @@ const usuarios = [ //Nuevamente utilizo const porque es información que no voy 
             { id: 106, nombre: 'Thiago Medina', email: 'thiago.medina@gmail.com', librosPrestados: [11] },
             { id: 107, nombre: 'Camila Herrera', email: 'CAMILAH@GMAIL.COM', librosPrestados: [13, 15] }
 ];
+
+//Punto 8: Manejo de Cadenas
+function normalizarDatosUsuario(texto, enMayusculas = false) {
+    //Para los datos que ingrese el usuario voy a utilizar esta función
+    texto = texto.trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "");//.trim() elimina los espacios adelante y detrás. El resto me elimina los caracteres especiales. 
+    return enMayusculas ? texto.toUpperCase() : texto.toLowerCase(); //Uso un if ternario para que en el caso que sea verdadero, el texto entre en mayúsculas y en caso de ser falso sea en minúsculas.
+    }; //Esta función la voy a inicializar en cada entrada del Usuario
