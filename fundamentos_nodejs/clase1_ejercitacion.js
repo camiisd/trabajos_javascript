@@ -107,8 +107,19 @@ Consigna:
 
 console.log('\nEjercicio 5:');
 
+function generarIniciales(nombreCompleto) {
+    let palabras = nombreCompleto.split(" "); 
+    let iniciales = "";
 
+    for (let i = 0; i < palabras.length; i++) {
+        iniciales += palabras[i][0].toUpperCase(); 
+    }
 
+    return iniciales; 
+}
+
+let nombre = 'camila denise soto'
+console.log(generarIniciales(nombre));
 
 
 /*Ejercicio 6: Calculadora de promedio
@@ -118,32 +129,85 @@ promedio.
 Consigna:
 • Usa un bucle for para sumar los números.
 • Divide la suma total entre la cantidad de elementos del array.
-Ejemplo:
+Ejemplo:*/
+console.log('\nEjercicio 6:');
 
-Ejercicio 7: Filtrar palabras largas
+let calificaciones = [9, 8, 10, 7, 6]
+
+function calcularPromedio (calificaciones) {
+    let suma = 0;
+    for (let i=0; i < calificaciones.length; i++) {
+        suma += calificaciones[i];
+    }
+    let promedio = suma / calificaciones.length
+
+    return promedio
+};
+
+console.log(calcularPromedio(calificaciones));
+
+/*Ejercicio 7: Filtrar palabras largas
 Escribe una función que reciba un array de palabras y un número, y
 devuelva las palabras que tienen más caracteres que el número dado.
 Consigna:
 • Usa el método filter().
 • Usa una función flecha para simplificar el código.
-Ejemplo:
+Ejemplo:*/
 
-Ejercicio 8: Contador de letras
+console.log('\nEjercicio 7:');
+
+let palabras = ['javascript', 'html', 'css', 'nodejs']
+let numero = 5;
+
+function palabrasLargas (palabras, numero) {
+    return palabras.filter(palabra => palabra.length > numero);
+    
+};
+
+console.log(palabrasLargas (palabras, numero))
+
+
+
+/*Ejercicio 8: Contador de letras
 Crea una función que reciba una cadena de texto y una letra, y devuelva
 cuántas veces aparece esa letra en la cadena.
 Consigna:
 • Usa un bucle for y condicionales.
-• Haz que la búsqueda no distinga entre mayúsculas y minúsculas.
+• Haz que la búsqueda no distinga entre mayúsculas y minúsculas.*/
 
-Ejercicio 9: Números únicos
+console.log('\nEjercicio 8:');
+
+texto = 'Programar es divertido';
+letra = 'r'
+
+function contarLetra(texto, letra) {
+    let contador = 0;
+    for(let i=0; i < texto.length; i++) {
+        let posicion = texto[i];
+        if (posicion === letra){
+            contador++
+        };
+    };
+    return contador
+};
+
+console.log(contarLetra(texto, 'r'));
+
+
+
+/*Ejercicio 9: Números únicos
 Escribe una función que reciba un array de números y devuelva un nuevo
 array sin números repetidos.
 
 Consigna:
 • Usa el objeto Set para eliminar duplicados.
-• Convierte el Set a un array usando el operador spread (...).
+• Convierte el Set a un array usando el operador spread (...).*/
 
-Ejercicio 10: Invertir palabras
+console.log('\nEjercicio 9:');
+
+
+
+/*Ejercicio 10: Invertir palabras
 Crea una función que reciba una cadena de texto y devuelva otra cadena
 con las palabras en orden inverso.
 Consigna:
